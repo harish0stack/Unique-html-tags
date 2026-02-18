@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML Tag Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Unique HTML Tags</h1>
+
+    <div class="card">
+        <h3>&lt;map&gt; — contextual image hotspots</h3>
+        <p><strong>map</strong> creates clickable areas on an image. In this demo, clicking the <strong>coffee cup</strong> redirects you to a related high-res close-up of coffee, while clicking the <strong>croissant</strong> takes you to a pastry close-up.</p>
+        <div class="preview">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80" 
+                 usemap="#breakfast-map" class="map-demo" alt="Cafe Table">
+            
+            <map name="breakfast-map">
+                <area shape="circle" coords="250,185,70" href="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" target="_blank" alt="Coffee Close-up">
+                <area shape="rect" coords="50,150,200,300" href="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" target="_blank" alt="Pastry Close-up">
+            </map>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>&lt;canvas&gt; — dynamic scriptable graphics</h3>
+        <p><strong>canvas</strong> acts as a resolution-dependent bitmap canvas, which can be used for rendering graphs, game visuals, or other visual images on the fly via JavaScript.</p>
+        <div class="preview">
+            <canvas id="mainCanvas" width="200" height="100"></canvas>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>&lt;s&gt; — indicating irrelevant content</h3>
+        <p><strong>s</strong> is used for text that is no longer correct, accurate, or relevant. It visually strikes through the text but retains the semantic meaning of "no longer applicable."</p>
+        <div class="preview">
+            <div class="strikethrough-text">
+                Flash Sale: <s>₹4,999</s> <strong>₹1,299</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>&lt;noscript&gt; — fallback for disabled scripts</h3>
+        <p><strong>noscript</strong> provides an alternate way to display information for browsers that have JavaScript disabled or do not support client-side scripting.</p>
+        <div class="preview">
+            <div class="noscript-box">
+                <noscript><strong style="color: #d9534f;">Warning: JavaScript is required for the full experience.</strong></noscript>
+                <small>Normally, you won't see anything here unless you disable JS in settings.</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>&lt;svg&gt; / &lt;ellipse&gt; — scalable vector ovals</h3>
+        <p><strong>ellipse</strong> is used to create an oval shape. Unlike a circle, you define two radii (rx and ry), allowing for flexible, perfectly sharp vector graphics at any zoom level.</p>
+        <div class="preview">
+            <svg width="180" height="100" class="svg-demo">
+                <ellipse cx="90" cy="50" rx="80" ry="40" style="fill:rgba(0, 179, 107, 0.1); stroke:var(--brand-green); stroke-width:3" />
+                <text x="50%" y="55%" text-anchor="middle" fill="var(--brand-green)" font-weight="bold" font-size="14">ROBOTICS</text>
+            </svg>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Canvas interaction: Drawing a simple gradient bar
+    const canvas = document.getElementById('mainCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    const grad = ctx.createLinearGradient(0, 0, 200, 0);
+    grad.addColorStop(0, "#00b36b");
+    grad.addColorStop(1, "#00d2ff");
+    
+    ctx.fillStyle = grad;
+    ctx.roundRect(10, 25, 180, 50, 10); // Simple rounded bar
+    ctx.fill();
+</script>
+
+</body>
+</html>

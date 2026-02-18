@@ -1,0 +1,105 @@
+:root {
+            --brand-green: #00b36b;
+            --bg-gray: #f8f9fa;
+            --text-dark: #333;
+            --text-muted: #555;
+            --border-color: #eee;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            margin: 0;
+            padding: 50px 20px;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        /* Card Styling - Matching the Photo */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: var(--brand-green);
+            margin: 0 0 15px 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: var(--text-muted);
+        }
+
+        .card p strong {
+            color: #000;
+            font-weight: 600;
+        }
+
+        /* Preview Containers */
+        .preview {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed #ddd;
+        }
+
+        /* Tag-Specific Styles */
+        img.map-demo {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        canvas {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .strikethrough-text {
+            font-size: 1.3rem;
+        }
+
+        .noscript-box {
+            background: #fff0f0;
+            padding: 15px;
+            border-left: 4px solid #ff4d4d;
+            border-radius: 4px;
+        }
+
+        .svg-demo {
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+        }
